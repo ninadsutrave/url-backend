@@ -7,38 +7,13 @@ const redirect = async (req,res) => {
         res.json({"message": "No code found"})
     }
 
-    const code = req.params.code
-
-    // [
-    //     {
-            
-    //     },
-    //     {
-
-    //     }
-    // ]
-    // [
-    //     {
-    //         "date": "27th May",
-    //         "clicks": 5
-    //     },
-    //     {
-    //         "date": "28th May",
-    //         "clicks": 5
-    //     },
-    //     {
-    //         "date": "29th May",
-    //         "clicks": 0
-    //     }
-    // ]
-
-    
+    const code = req.params.code    
 
     try {
         const url = await Url.findOne({ code })
 
         if(!url) {
-            return res.redirect('http://localhost:3000/error')
+            return res.redirect(process.env.FRONT_URL+'/error')
         }
         
         if(url.longUrl) {
