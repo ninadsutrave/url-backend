@@ -13,7 +13,7 @@ connect()
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
 app.use(cors({
-    origin: '*'
+    origin: process.env.FRONT_URL
 }))
 app.use('/', apis)
 
