@@ -12,9 +12,11 @@ connect()
 
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
+
 app.use(cors({
-    origin: process.env.FRONT_URL
+    origin: '*'
 }))
+
 app.use('/', apis)
 
 app.listen(PORT, () => {
