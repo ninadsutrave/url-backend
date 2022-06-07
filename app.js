@@ -14,8 +14,16 @@ app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
 
 app.use(cors({
-    origin: '*'
+    origin: process.env.FRONT_URL
 }))
+
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    next();
+});
+
+
 
 app.use('/', apis)
 
