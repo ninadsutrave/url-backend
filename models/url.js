@@ -24,6 +24,11 @@ const UrlSchema = new Schema({
         type: Array,
         required: true,
         default: []
+    }, 
+    date: {
+        type: String,
+        required: true,
+        default: Date.now
     }
 })
 

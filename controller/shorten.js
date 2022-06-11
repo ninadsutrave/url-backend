@@ -34,7 +34,8 @@ const shorten = async (req,res) => {
             code,
             longUrl,
             shortUrl,
-            clicks
+            clicks,
+            date: (new Date()).toString()
         })
 
         await urlData.save()
