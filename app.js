@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
 
 app.use(cors({
-    origin: process.env.FRONT_URL
+    origin: "https://teetsy.netlify.app"
 }))
 
 app.use(function(req, res, next) {
