@@ -1,7 +1,7 @@
 {
-  "name": "server",
+  "name": "teetsy-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Custom URL shortner REST API",
   "main": "app.js",
   "engine": {
     "node": "14.x"
@@ -10,9 +10,9 @@
   "scripts": {
     "start": "node app.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["URL", "URL Shortner", "Custom URL"],
+  "author": "Ninad Sutrave",
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.20.0",
     "config": "^3.3.7",
