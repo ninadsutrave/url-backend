@@ -1,4 +1,4 @@
-# URL Shortner REST API
+# URL Shortener REST API
 
 ## Description
 
