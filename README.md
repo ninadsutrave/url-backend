@@ -1,68 +1,73 @@
 # URL Shortner REST API
 
-
-## Description ##
+## Description
 
 A REST API to generate custom short links for users and to track the number of clicks make on the shortened link.
 
-## API EndPoints ##
+## API EndPoints
 
-BASE URL:  https://tit.vercel.app
+BASE URL: https://tit.vercel.app
 
-* /search
+- /search
 
-  Purpose  | To check the availibility of the custom code given by the user
-  ------------- | -------------
-  METHOD  | GET
-  Query Parameters  |  searchItem
-  Body Parameters | None
-  Example | https://tit.vercel.app/search?searchItem=play
-  
-* /create
-  
-  Purpose  | To check the availibility of the custom code given by the user
-  ------------- | -------------
-  METHOD  | GET
-  Query Parameters  |  searchItem
-  Body Parameters | None
-  Example | https://tit.vercel.app/search?searchItem=play
+  | Purpose          | To check the availibility of the custom code given by the user |
+  | ---------------- | -------------------------------------------------------------- |
+  | METHOD           | GET                                                            |
+  | Query Parameters | searchItem                                                     |
+  | Path Parameters  | None                                                           |
+  | Request Body     | None                                                           |
+  | URL              | https://tit.vercel.app/search?searchItem=play                  |
 
-* /clicks
+- /shortenUrl
 
-  Purpose  | To check the availibility of the custom code given by the user
-  ------------- | -------------
-  METHOD  | GET
-  Query Parameters  |  searchItem
-  Body Parameters | None
-  Example | https://tit.vercel.app/search?searchItem=play
+  | Purpose          | To auto generate a shortened link for the URL provided |
+  | ---------------- | ------------------------------------------------------ |
+  | METHOD           | POST                                                   |
+  | Query Parameters | None                                                   |
+  | Path Parameters  | None                                                   |
+  | Request Body     | { longUrl }                                            |
+  | URL              | https://tit.vercel.app/shortenUrl                      |
 
-* /shortenUrl
+- /create
 
-  Purpose  | To check the availibility of the custom code given by the user
-  ------------- | -------------
-  METHOD  | GET
-  Query Parameters  |  searchItem
-  Body Parameters | None
-  Example | https://tit.vercel.app/search?searchItem=play
+  | Purpose          | To create a shortened link with the given custom code |
+  | ---------------- | ----------------------------------------------------- |
+  | METHOD           | POST                                                  |
+  | Query Parameters | None                                                  |
+  | Path Parameters  | None                                                  |
+  | Request Body     | { longUrl, code }                                     |
+  | URL              | https://tit.vercel.app/create                         |
 
-* /analytics
+- /clicks
 
-  Purpose  | To check the availibility of the custom code given by the user
-  ------------- | -------------
-  METHOD  | GET
-  Query Parameters  |  searchItem
-  Body Parameters | None
-  Example | https://tit.vercel.app/search?searchItem=play
+  | Purpose          | To fetch the number of clicks made on the shortened link |
+  | ---------------- | -------------------------------------------------------- |
+  | METHOD           | POST                                                     |
+  | Query Parameters | None                                                     |
+  | Body Parameters  | None                                                     |
+  | Request Body     | { shortUrl }                                             |
+  | URL              | https://tit.vercel.app/clicks                            |
 
-* /:code
+- /analytics
 
-  Purpose  | To check the availibility of the custom code given by the user
-  ------------- | -------------
-  METHOD  | GET
-  Query Parameters  |  searchItem
-  Body Parameters | None
-  Example | https://tit.vercel.app/search?searchItem=play
+  | Purpose          | To fetch the detailed information of interactivity with the link |
+  | ---------------- | ---------------------------------------------------------------- |
+  | METHOD           | POST                                                             |
+  | Query Parameters | None                                                             |
+  | Body Parameters  | None                                                             |
+  | Request Body     | { shortUrl }                                                     |
+  | URL              | https://tit.vercel.app/analytics                                 |
 
-## License ## 
+- /:code
+
+  | Purpose          | To redirect to the user's desired URL |
+  | ---------------- | ------------------------------------- |
+  | METHOD           | GET                                   |
+  | Query Parameters | None                                  |
+  | Body Parameters  | code                                  |
+  | Request Body     | None                                  |
+  | URL              | https://tit.vercel.app/:code          |
+
+## License
 
 MIT © Ninad Sutrave
