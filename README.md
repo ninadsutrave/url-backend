@@ -6,7 +6,7 @@ A REST API to generate custom short links for users and to track the number of c
 
 ## API EndPoints
 
-BASE URL: https://tit.vercel.app
+BASE URL: https://tsy.vercel.app
 
 - /search
 
@@ -16,7 +16,7 @@ BASE URL: https://tit.vercel.app
   | Query Parameters | searchItem                                                     |
   | Path Parameters  | None                                                           |
   | Request Body     | None                                                           |
-  | URL              | https://tit.vercel.app/search?searchItem=play                  |
+  | URL              | https://tsy.vercel.app/search?searchItem=play                  |
 
 - /shortenUrl
 
@@ -26,7 +26,7 @@ BASE URL: https://tit.vercel.app
   | Query Parameters | None                                                   |
   | Path Parameters  | None                                                   |
   | Request Body     | { longUrl }                                            |
-  | URL              | https://tit.vercel.app/shortenUrl                      |
+  | URL              | https://tsy.vercel.app/shortenUrl                      |
 
 - /create
 
@@ -36,7 +36,7 @@ BASE URL: https://tit.vercel.app
   | Query Parameters | None                                                  |
   | Path Parameters  | None                                                  |
   | Request Body     | { longUrl, code }                                     |
-  | URL              | https://tit.vercel.app/create                         |
+  | URL              | https://tsy.vercel.app/create                         |
 
 - /clicks
 
@@ -46,7 +46,7 @@ BASE URL: https://tit.vercel.app
   | Query Parameters | None                                                     |
   | Body Parameters  | None                                                     |
   | Request Body     | { shortUrl }                                             |
-  | URL              | https://tit.vercel.app/clicks                            |
+  | URL              | https://tsy.vercel.app/clicks                            |
 
 - /analytics
 
@@ -56,7 +56,7 @@ BASE URL: https://tit.vercel.app
   | Query Parameters | None                                                             |
   | Body Parameters  | None                                                             |
   | Request Body     | { shortUrl }                                                     |
-  | URL              | https://tit.vercel.app/analytics                                 |
+  | URL              | https://tsy.vercel.app/analytics                                 |
 
 - /:code
 
@@ -66,7 +66,7 @@ BASE URL: https://tit.vercel.app
   | Query Parameters | None                                  |
   | Body Parameters  | code                                  |
   | Request Body     | None                                  |
-  | URL              | https://tit.vercel.app/:code          |
+  | URL              | https://tsy.vercel.app/:code          |
 
 ## Front End
 
